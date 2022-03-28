@@ -1,16 +1,16 @@
 {
-  "name": "@uniswap/sdk",
+  "name": "@gulabs/sdk",
   "license": "MIT",
-  "version": "3.0.3",
-  "description": "🛠 An SDK for building applications on top of Uniswap.",
+  "version": "0.0.1",
+  "description": "🛠 An SDK for building applications on top of GUSwap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/Uniswap/uniswap-sdk.git",
+  "repository": "https://github.com/gulabs/v2-sdk.git",
   "keywords": [
-    "uniswap",
+    "guswap",
     "ethereum"
   ],
   "module": "dist/sdk.esm.js",
