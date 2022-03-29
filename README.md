@@ -54,3 +54,7 @@ Time:        5.091s
 Ran all test suites.
 ✨  Done in 6.61s.
 ```
+
+# Note
+
+- 2 tests going to fail because hard code of author for mainnet
