@@ -1,5 +1,5 @@
 {
-  "name": "@gulabs/sdk",
+  "name": "@gulabs/guswap-sdk",
   "license": "MIT",
   "version": "0.0.1",
   "description": "🛠 An SDK for building applications on top of GUSwap.",
@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/gulabs/v2-sdk.git",
+  "repository": "https://github.com/gulabs/guswap-sdk.git",
   "keywords": [
     "guswap",
     "ethereum"
