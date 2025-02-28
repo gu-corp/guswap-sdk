@@ -12,15 +12,12 @@ import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider } from '@ethersproject/providers';
 import IUniswapV2Pair from '@gulabs/guswap-core/build/IUniswapV2Pair.json';
 
-var _SOLIDITY_TYPE_MAXIMA;
+var _SOLIDITY_TYPE_MAXIMA, _V2_ROUTER_ADDRESSES;
 var ChainId;
 
 (function (ChainId) {
   ChainId[ChainId["MAINNET"] = 1] = "MAINNET";
-  ChainId[ChainId["ROPSTEN"] = 3] = "ROPSTEN";
-  ChainId[ChainId["RINKEBY"] = 4] = "RINKEBY";
-  ChainId[ChainId["G\xD6RLI"] = 5] = "G\xD6RLI";
-  ChainId[ChainId["KOVAN"] = 42] = "KOVAN";
+  ChainId[ChainId["SEPOLIA"] = 11155111] = "SEPOLIA";
   ChainId[ChainId["JAPAN_OPEN_CHAIN_TESTNET"] = 10081] = "JAPAN_OPEN_CHAIN_TESTNET";
 })(ChainId || (ChainId = {}));
 
@@ -60,6 +57,7 @@ var SolidityType;
 })(SolidityType || (SolidityType = {}));
 
 var SOLIDITY_TYPE_MAXIMA = (_SOLIDITY_TYPE_MAXIMA = {}, _SOLIDITY_TYPE_MAXIMA[SolidityType.uint8] = /*#__PURE__*/JSBI.BigInt('0xff'), _SOLIDITY_TYPE_MAXIMA[SolidityType.uint256] = /*#__PURE__*/JSBI.BigInt('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'), _SOLIDITY_TYPE_MAXIMA);
+var V2_ROUTER_ADDRESSES = (_V2_ROUTER_ADDRESSES = {}, _V2_ROUTER_ADDRESSES[ChainId.MAINNET] = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D', _V2_ROUTER_ADDRESSES[ChainId.SEPOLIA] = '0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3', _V2_ROUTER_ADDRESSES[ChainId.JAPAN_OPEN_CHAIN_TESTNET] = '0x456C80992F562E9dc5683cdb147DB7345C8871Eb', _V2_ROUTER_ADDRESSES);
 
 function _defineProperties(target, props) {
   for (var i = 0; i < props.length; i++) {
@@ -439,7 +437,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.ROPSTEN] = /*#__PURE__*/new Token(ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.RINKEBY] = /*#__PURE__*/new Token(ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.GÖRLI] = /*#__PURE__*/new Token(ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.KOVAN] = /*#__PURE__*/new Token(ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.JAPAN_OPEN_CHAIN_TESTNET] = /*#__PURE__*/new Token(ChainId.JAPAN_OPEN_CHAIN_TESTNET, '0x9bCc9e1549f2313E23f8bF26193aeE85C53576C0', 18, 'WETH', 'Wrapped Ether'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.SEPOLIA] = /*#__PURE__*/new Token(ChainId.SEPOLIA, '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.JAPAN_OPEN_CHAIN_TESTNET] = /*#__PURE__*/new Token(ChainId.JAPAN_OPEN_CHAIN_TESTNET, '0x9bCc9e1549f2313E23f8bF26193aeE85C53576C0', 18, 'WETH', 'Wrapped Ether'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -1570,5 +1568,5 @@ var Fetcher = /*#__PURE__*/function () {
   return Fetcher;
 }();
 
-export { ChainId, Currency, CurrencyAmount, ETHER, FACTORY_ADDRESS, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
+export { ChainId, Currency, CurrencyAmount, ETHER, FACTORY_ADDRESS, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, V2_ROUTER_ADDRESSES, WETH, currencyEquals, inputOutputComparator, tradeComparator };
 //# sourceMappingURL=guswap-sdk.esm.js.map

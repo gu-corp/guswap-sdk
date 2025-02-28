@@ -5,10 +5,7 @@ export type BigintIsh = JSBI | bigint | string
 
 export enum ChainId {
   MAINNET = 1,
-  ROPSTEN = 3,
-  RINKEBY = 4,
-  GÖRLI = 5,
-  KOVAN = 42,
+  SEPOLIA = 11155111,
   JAPAN_OPEN_CHAIN_TESTNET = 10081
 }
 
@@ -48,4 +45,12 @@ export enum SolidityType {
 export const SOLIDITY_TYPE_MAXIMA = {
   [SolidityType.uint8]: JSBI.BigInt('0xff'),
   [SolidityType.uint256]: JSBI.BigInt('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff')
+}
+
+type AddressMap = { [chainId: number]: string }
+
+export const V2_ROUTER_ADDRESSES: AddressMap = {
+  [ChainId.MAINNET]: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
+  [ChainId.SEPOLIA]: '0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3',
+  [ChainId.JAPAN_OPEN_CHAIN_TESTNET]: '0x456C80992F562E9dc5683cdb147DB7345C8871Eb'
 }

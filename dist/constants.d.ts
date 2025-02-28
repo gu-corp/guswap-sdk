@@ -2,10 +2,7 @@ import JSBI from 'jsbi';
 export declare type BigintIsh = JSBI | bigint | string;
 export declare enum ChainId {
     MAINNET = 1,
-    ROPSTEN = 3,
-    RINKEBY = 4,
-    GÖRLI = 5,
-    KOVAN = 42,
+    SEPOLIA = 11155111,
     JAPAN_OPEN_CHAIN_TESTNET = 10081
 }
 export declare enum TradeType {
@@ -37,3 +34,8 @@ export declare const SOLIDITY_TYPE_MAXIMA: {
     uint8: JSBI;
     uint256: JSBI;
 };
+declare type AddressMap = {
+    [chainId: number]: string;
+};
+export declare const V2_ROUTER_ADDRESSES: AddressMap;
+export {};
