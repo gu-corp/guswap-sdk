@@ -12,7 +12,7 @@ import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider } from '@ethersproject/providers';
 import IUniswapV2Pair from '@gulabs/guswap-core/build/IUniswapV2Pair.json';
 
-var _SOLIDITY_TYPE_MAXIMA, _V2_ROUTER_ADDRESSES;
+var _SOLIDITY_TYPE_MAXIMA, _V2_ROUTER_ADDRESSES, _V2_FACTORY_ADDRESSES;
 var ChainId;
 
 (function (ChainId) {
@@ -36,8 +36,7 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0xd923b31eB8D9efF140B6C3feF31d9bae05440d72';
-var INIT_CODE_HASH = '0xaae7dc513491fb17b541bd4a9953285ddf2bb20a773374baecc88c4ebada0767';
+var INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -58,6 +57,7 @@ var SolidityType;
 
 var SOLIDITY_TYPE_MAXIMA = (_SOLIDITY_TYPE_MAXIMA = {}, _SOLIDITY_TYPE_MAXIMA[SolidityType.uint8] = /*#__PURE__*/JSBI.BigInt('0xff'), _SOLIDITY_TYPE_MAXIMA[SolidityType.uint256] = /*#__PURE__*/JSBI.BigInt('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'), _SOLIDITY_TYPE_MAXIMA);
 var V2_ROUTER_ADDRESSES = (_V2_ROUTER_ADDRESSES = {}, _V2_ROUTER_ADDRESSES[ChainId.MAINNET] = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D', _V2_ROUTER_ADDRESSES[ChainId.SEPOLIA] = '0xeE567Fe1712Faf6149d80dA1E6934E354124CfE3', _V2_ROUTER_ADDRESSES[ChainId.JAPAN_OPEN_CHAIN_TESTNET] = '0x456C80992F562E9dc5683cdb147DB7345C8871Eb', _V2_ROUTER_ADDRESSES);
+var V2_FACTORY_ADDRESSES = (_V2_FACTORY_ADDRESSES = {}, _V2_FACTORY_ADDRESSES[ChainId.MAINNET] = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f', _V2_FACTORY_ADDRESSES[ChainId.SEPOLIA] = '0xF62c03E08ada871A0bEb309762E260a7a6a880E6', _V2_FACTORY_ADDRESSES[ChainId.JAPAN_OPEN_CHAIN_TESTNET] = '0xd923b31eB8D9efF140B6C3feF31d9bae05440d72', _V2_FACTORY_ADDRESSES);
 
 function _defineProperties(target, props) {
   for (var i = 0; i < props.length; i++) {
@@ -772,7 +772,7 @@ var Pair = /*#__PURE__*/function () {
     if (((_PAIR_ADDRESS_CACHE = PAIR_ADDRESS_CACHE) === null || _PAIR_ADDRESS_CACHE === void 0 ? void 0 : (_PAIR_ADDRESS_CACHE$t = _PAIR_ADDRESS_CACHE[tokens[0].address]) === null || _PAIR_ADDRESS_CACHE$t === void 0 ? void 0 : _PAIR_ADDRESS_CACHE$t[tokens[1].address]) === undefined) {
       var _PAIR_ADDRESS_CACHE2, _extends2, _extends3;
 
-      PAIR_ADDRESS_CACHE = _extends({}, PAIR_ADDRESS_CACHE, (_extends3 = {}, _extends3[tokens[0].address] = _extends({}, (_PAIR_ADDRESS_CACHE2 = PAIR_ADDRESS_CACHE) === null || _PAIR_ADDRESS_CACHE2 === void 0 ? void 0 : _PAIR_ADDRESS_CACHE2[tokens[0].address], (_extends2 = {}, _extends2[tokens[1].address] = getCreate2Address(FACTORY_ADDRESS, keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]), INIT_CODE_HASH), _extends2)), _extends3));
+      PAIR_ADDRESS_CACHE = _extends({}, PAIR_ADDRESS_CACHE, (_extends3 = {}, _extends3[tokens[0].address] = _extends({}, (_PAIR_ADDRESS_CACHE2 = PAIR_ADDRESS_CACHE) === null || _PAIR_ADDRESS_CACHE2 === void 0 ? void 0 : _PAIR_ADDRESS_CACHE2[tokens[0].address], (_extends2 = {}, _extends2[tokens[1].address] = getCreate2Address(V2_FACTORY_ADDRESSES[tokenA.chainId], keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]), INIT_CODE_HASH), _extends2)), _extends3));
     }
 
     return PAIR_ADDRESS_CACHE[tokens[0].address][tokens[1].address];
@@ -1568,5 +1568,5 @@ var Fetcher = /*#__PURE__*/function () {
   return Fetcher;
 }();
 
-export { ChainId, Currency, CurrencyAmount, ETHER, FACTORY_ADDRESS, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, V2_ROUTER_ADDRESSES, WETH, currencyEquals, inputOutputComparator, tradeComparator };
+export { ChainId, Currency, CurrencyAmount, ETHER, Fetcher, Fraction, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, V2_ROUTER_ADDRESSES, WETH, currencyEquals, inputOutputComparator, tradeComparator };
 //# sourceMappingURL=guswap-sdk.esm.js.map

@@ -6,7 +6,6 @@ export {
   ChainId,
   TradeType,
   Rounding,
-  FACTORY_ADDRESS,
   INIT_CODE_HASH,
   MINIMUM_LIQUIDITY,
   V2_ROUTER_ADDRESSES,

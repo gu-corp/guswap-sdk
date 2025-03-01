@@ -14,8 +14,7 @@ export declare enum Rounding {
     ROUND_HALF_UP = 1,
     ROUND_UP = 2
 }
-export declare const FACTORY_ADDRESS = "0xd923b31eB8D9efF140B6C3feF31d9bae05440d72";
-export declare const INIT_CODE_HASH = "0xaae7dc513491fb17b541bd4a9953285ddf2bb20a773374baecc88c4ebada0767";
+export declare const INIT_CODE_HASH = "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f";
 export declare const MINIMUM_LIQUIDITY: JSBI;
 export declare const ZERO: JSBI;
 export declare const ONE: JSBI;
@@ -38,4 +37,5 @@ declare type AddressMap = {
     [chainId: number]: string;
 };
 export declare const V2_ROUTER_ADDRESSES: AddressMap;
+export declare const V2_FACTORY_ADDRESSES: AddressMap;
 export {};
