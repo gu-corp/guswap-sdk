@@ -1,14 +1,14 @@
 {
-  "name": "@gulabs/guswap-sdk",
+  "name": "@x-gate-project/x-swap-sdk",
   "license": "MIT",
   "version": "0.0.1",
-  "description": "🛠 An SDK for building applications on top of GUSwap.",
+  "description": "🛠 An SDK for building applications on top of X-Swap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/gulabs/guswap-sdk.git",
+  "repository": "https://github.com/x-gate-project/x-swap-sdk.git",
   "keywords": [
     "guswap",
     "ethereum"
@@ -22,7 +22,7 @@
     "prepublishOnly": "tsdx build"
   },
   "dependencies": {
-    "@gulabs/guswap-core": "https://github.com/gulabs/guswap-core.git#v0.0.1",
+    "@uniswap/v2-core": "^1.0.0",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",
     "jsbi": "^3.1.1",
