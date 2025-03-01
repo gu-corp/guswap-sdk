@@ -73,9 +73,9 @@ export const WETH = {
   ),
   [ChainId.JAPAN_OPEN_CHAIN_TESTNET]: new Token(
     ChainId.JAPAN_OPEN_CHAIN_TESTNET,
-    '0x9bCc9e1549f2313E23f8bF26193aeE85C53576C0',
+    '0x8B3Ae763DEc0f55371CB92cb271b20d4dA8eACB5',
     18,
-    'WETH',
-    'Wrapped Ether'
+    'WJOCT',
+    'Wrapped JOCT'
   )
 }

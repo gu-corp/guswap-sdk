@@ -437,7 +437,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.SEPOLIA] = /*#__PURE__*/new Token(exports.ChainId.SEPOLIA, '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.JAPAN_OPEN_CHAIN_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.JAPAN_OPEN_CHAIN_TESTNET, '0x9bCc9e1549f2313E23f8bF26193aeE85C53576C0', 18, 'WETH', 'Wrapped Ether'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.SEPOLIA] = /*#__PURE__*/new Token(exports.ChainId.SEPOLIA, '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.JAPAN_OPEN_CHAIN_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.JAPAN_OPEN_CHAIN_TESTNET, '0x8B3Ae763DEc0f55371CB92cb271b20d4dA8eACB5', 18, 'WJOCT', 'Wrapped JOCT'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
