@@ -17,6 +17,9 @@ var ChainId;
 
 (function (ChainId) {
   ChainId[ChainId["MAINNET"] = 1] = "MAINNET";
+  ChainId[ChainId["BASE"] = 8453] = "BASE";
+  ChainId[ChainId["AVALANCHE"] = 43114] = "AVALANCHE";
+  ChainId[ChainId["ARBITRUM_ONE"] = 42161] = "ARBITRUM_ONE";
   ChainId[ChainId["SEPOLIA"] = 11155111] = "SEPOLIA";
   ChainId[ChainId["JAPAN_OPEN_CHAIN_TESTNET"] = 10081] = "JAPAN_OPEN_CHAIN_TESTNET";
 })(ChainId || (ChainId = {}));
@@ -437,7 +440,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.SEPOLIA] = /*#__PURE__*/new Token(ChainId.SEPOLIA, '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.JAPAN_OPEN_CHAIN_TESTNET] = /*#__PURE__*/new Token(ChainId.JAPAN_OPEN_CHAIN_TESTNET, '0x8B3Ae763DEc0f55371CB92cb271b20d4dA8eACB5', 18, 'WJOCT', 'Wrapped JOCT'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.BASE] = /*#__PURE__*/new Token(ChainId.BASE, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.AVALANCHE] = /*#__PURE__*/new Token(ChainId.AVALANCHE, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX'), _WETH[ChainId.ARBITRUM_ONE] = /*#__PURE__*/new Token(ChainId.ARBITRUM_ONE, '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.SEPOLIA] = /*#__PURE__*/new Token(ChainId.SEPOLIA, '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14', 18, 'WETH', 'Wrapped Ether'), _WETH[ChainId.JAPAN_OPEN_CHAIN_TESTNET] = /*#__PURE__*/new Token(ChainId.JAPAN_OPEN_CHAIN_TESTNET, '0x8B3Ae763DEc0f55371CB92cb271b20d4dA8eACB5', 18, 'WJOCT', 'Wrapped JOCT'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
