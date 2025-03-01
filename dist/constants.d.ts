@@ -39,6 +39,6 @@ export declare const SOLIDITY_TYPE_MAXIMA: {
 declare type AddressMap = {
     [chainId: number]: string;
 };
-export declare const V2_ROUTER_ADDRESSES: AddressMap;
 export declare const V2_FACTORY_ADDRESSES: AddressMap;
+export declare const V2_ROUTER_ADDRESSES: AddressMap;
 export {};
